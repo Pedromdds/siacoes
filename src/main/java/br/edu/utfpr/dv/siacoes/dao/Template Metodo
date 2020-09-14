@@ -1,0 +1,26 @@
+package br.edu.utfpr.dv.siacoes.dao;
+
+import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public abstract class Template Metodo {
+
+ public abstract class Template Metodo {
+    public abstratct void funcoesAbstratas(){
+        closeConection(Connection conn, PreparedStatement stmt, ResultSet rs);
+        findById(int id);
+        listAll(boolean onlyActive);
+        save(int idUser, Department department);
+        loadObject(ResultSet rs);
+        listByCampus(int idcampus, boolean onlyActive);
+    }
+
+    public abstract void loadObject(ResultSet rs)  throws SQLException;
+    public abstract void  findById(int id)  throws SQLException;
+    public abstract void listAll(boolean onlyActive)  throws SQLException;
+    public abstract void closeConection(Connection conn, PreparedStatement stmt, ResultSet rs)  throws SQLException;
+    public abstract void save(int idUser, Department department)  throws SQLException;
+    public abstract void listByCampus(idCampus, onlyActive)  throws SQLException;
+}
